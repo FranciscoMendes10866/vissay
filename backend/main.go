@@ -18,5 +18,6 @@ func main() {
 	app.Use(logger.New())
 	app.Use(compress.New())
 	router.AuthRouter(app)
+	router.ArticlesRouter(app)
 	app.Listen(":1903")
 }

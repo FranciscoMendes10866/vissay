@@ -21,7 +21,7 @@ func SignUp(c *fiber.Ctx) error {
 	if create == nil {
 		return c.SendStatus(fiber.StatusInternalServerError)
 	}
-	response = resStruct{
+	response := resStruct{
 		ID:       body.ID,
 		Username: body.Username,
 	}

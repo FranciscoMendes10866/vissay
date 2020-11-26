@@ -17,7 +17,7 @@ func SignIn(c *fiber.Ctx) error {
 	if findUser == nil {
 		return c.SendStatus(fiber.StatusInternalServerError)
 	}
-	response = resStruct{
+	response := resStruct{
 		ID:       body.ID,
 		Username: body.Username,
 		Password: body.Password,

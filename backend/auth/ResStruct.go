@@ -1,7 +1,5 @@
 package auth
 
-var response resStruct
-
 type resStruct struct {
 	ID       uint   `json:"id"`
 	Email    string `json:"email"`
