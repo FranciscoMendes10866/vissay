@@ -47,7 +47,7 @@ const CreateForm = () => {
                             onChange={handleOnChange}
                         />
                         <Input
-                            type="text"
+                            type="date"
                             placeholder="Date"
                             className="mt-2"
                             id="date"
@@ -55,7 +55,7 @@ const CreateForm = () => {
                             onChange={handleOnChange}
                         />
                         <Button
-                            color="primary"
+                            color="warning"
                             className="mt-4"
                             type="submit"
                             onClick={handleSubmit}

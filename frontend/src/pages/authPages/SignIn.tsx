@@ -47,7 +47,7 @@ const SignInPage = () => {
                             onChange={handleOnChange}
                         />
                         <Button
-                            color="primary"
+                            color="warning"
                             className="mt-4"
                             type="submit"
                             onClick={handleSubmit}

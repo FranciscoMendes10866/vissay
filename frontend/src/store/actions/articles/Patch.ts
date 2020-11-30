@@ -13,7 +13,7 @@ const PatchArticle = (formData: PatchArticleInterface) => async (dispatch: Dispa
     }
     const stateToken = getState().auth.token
     const baseURL = `http://localhost:1903/api/v1/articles/${formData.id}`
-    await axios.post(baseURL, form, {
+    await axios.patch(baseURL, form, {
         headers: {
             'Authorization': `Bearer ${stateToken}`
         }

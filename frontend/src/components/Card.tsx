@@ -7,6 +7,7 @@ import {
     Button, Container, Row, Col
 } from 'reactstrap';
 
+import ModalComponent from './Modal'
 import GetAction from '../store/actions/articles/Get'
 import DeleteAction from '../store/actions/articles/Delete'
 import { StoreTypes } from '../store/types/storeTypes';
@@ -33,7 +34,8 @@ const CardComponent = () => {
                         <Button
                             className="mr-2"
                             onClick={() => handleDelete(article.id)}
-                            color="danger">Delete</Button>
+                            color="warning">Delete</Button>
+                        <ModalComponent article={article} />
                     </CardBody>
                 </Card>
             </Col>
