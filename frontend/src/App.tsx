@@ -2,7 +2,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import store from './store'
-import { Panel, SignIn, SignUp } from './pages'
+import { Panel, SignIn, SignUp, Create } from './pages'
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
           <Route path="/" exact component={SignUp} />
           <Route path="/sign-in" component={SignIn} />
           <Route path="/panel" component={Panel} />
+          <Route path="/create" component={Create} />
         </Switch>
       </Router>
     </Provider>

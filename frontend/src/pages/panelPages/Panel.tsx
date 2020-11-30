@@ -1,7 +1,9 @@
+import { Card } from '../../components'
+
 const Panel = () => {
     return (
         <div>
-            Panel
+            <Card />
         </div>
     )
 }

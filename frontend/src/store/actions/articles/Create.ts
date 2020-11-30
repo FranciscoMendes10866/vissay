@@ -5,7 +5,7 @@ import { ArticleDispatchTypes, CREATE_ARTICLE } from '../../types/articles/dispa
 import { CreateArticleInterface } from '../../types/articles/formTypes'
 import { StoreTypes } from '../../types/storeTypes'
 
-const CreateArticle = (form: CreateArticleInterface, history: any) => async (dispatch: Dispatch<ArticleDispatchTypes>, getState: () => StoreTypes) => {
+const CreateArticle = (form: CreateArticleInterface) => async (dispatch: Dispatch<ArticleDispatchTypes>, getState: () => StoreTypes) => {
     const stateToken = getState().auth.token
     const baseURL = 'http://localhost:1903/api/v1/articles'
     await axios.post(baseURL, form, {
@@ -19,7 +19,6 @@ const CreateArticle = (form: CreateArticleInterface, history: any) => async (dis
                     type: CREATE_ARTICLE,
                     article: data,
                 })
-                history.push('/panel')
             }
         })
         .catch((err) => {

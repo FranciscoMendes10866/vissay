@@ -13,7 +13,7 @@ const DeleteArticle = (id: number) => async (dispatch: Dispatch<ArticleDispatchT
         }
       })
         .then(({ data }) => {
-            if (data === 200) {
+            if (data === 'OK') {
                 dispatch({
                     type: DELETE_ARTICLE,
                     id: id,
